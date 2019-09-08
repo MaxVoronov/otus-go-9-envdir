@@ -23,12 +23,3 @@ install:
 ## lint: Lint project code (using golangci-lint)
 lint:
 	@golangci-lint run -v
-
-## test: Start project testing
-test:
-	@go test -v ./...
-
-## cover: Generate test coverage report and open it
-cover:
-	@go test -v -coverprofile=/tmp/$(BINARY)-cover.out ./...
-	@go tool cover -html=/tmp/$(BINARY)-cover.out
